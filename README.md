@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Add react router core and add it to [package.json](package.json)
+`npm install react-router-dom --save -g`
+
 ## Available Scripts
 
 In the project directory, you can run:
