@@ -12,7 +12,7 @@ import TeamComponent from './components/team';
 import AboutComponent from './components/about';
 import TeamChildComponent from './components/team-child';
 import LoginComponent from './components/login';
-import PrivateRoute from './private';
+import {PrivateRoute,PublicRoute} from './private';
 import { ItemChildComponent } from './components/item-child';
 
 const Item = (props) => {
@@ -70,6 +70,9 @@ const App = (props) => {
                 <Route path='/login' component={LoginComponent}></Route>
                 <PrivateRoute exact path='/admin' 
                     Component={HomeComponent}
+                    isAuthenticated={false} />
+                <PublicRoute exact path='/login' 
+                    Component={LoginComponent}
                     isAuthenticated={false} />
                 <Route component={() => 'PAGE NOT FOUND'} />
             </Switch>
